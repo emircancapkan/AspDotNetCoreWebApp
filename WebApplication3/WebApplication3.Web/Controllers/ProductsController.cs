@@ -29,7 +29,9 @@ namespace WebApplication3.Web.Controllers
         public IActionResult Index()
         {
             var products = _context.Products.ToList();
+            
             return View(products);
+            
         }
 
         public IActionResult Remove(int id)
@@ -77,6 +79,7 @@ namespace WebApplication3.Web.Controllers
 
             _context.Products.Update(updateProduct);
             _context.SaveChanges();
+            TempData["status"]="The Product is updated succesfully!";
             return RedirectToAction("Index");
 
         }

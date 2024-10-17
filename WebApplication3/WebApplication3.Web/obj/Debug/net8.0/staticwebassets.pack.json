@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\WebApplication3.Web.bundle.scp.css"
     },
     {
+      "Id": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\wwwroot\\css\\add.css",
+      "PackagePath": "staticwebassets\\css\\add.css"
+    },
+    {
       "Id": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\wwwroot\\css\\index.css",
       "PackagePath": "staticwebassets\\css\\index.css"
     },
     {
       "Id": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\wwwroot\\css\\update.css",
+      "PackagePath": "staticwebassets\\css\\update.css"
     },
     {
       "Id": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\wwwroot\\favicon.ico",

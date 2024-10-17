@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dblAcb4PzbgUo5pOc1MnGtgEnUN7lDfwmmSh/NeBhAk=",
+  "Hash": "6d50NSx59iIH+KgF1/cn/KUbHV+4gRxLhG2OxFFQ3sU=",
   "Source": "WebApplication3.Web",
   "BasePath": "_content/WebApplication3.Web",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebApplication3.Web.bundle.scp.css"
     },
     {
+      "Identity": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\wwwroot\\css\\add.css",
+      "SourceId": "WebApplication3.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\wwwroot\\",
+      "BasePath": "_content/WebApplication3.Web",
+      "RelativePath": "css/add.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\add.css"
+    },
+    {
       "Identity": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\wwwroot\\css\\index.css",
       "SourceId": "WebApplication3.Web",
       "SourceType": "Discovered",
@@ -91,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\wwwroot\\css\\update.css",
+      "SourceId": "WebApplication3.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\wwwroot\\",
+      "BasePath": "_content/WebApplication3.Web",
+      "RelativePath": "css/update.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\update.css"
     },
     {
       "Identity": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\wwwroot\\favicon.ico",

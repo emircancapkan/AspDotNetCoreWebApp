@@ -68,7 +68,7 @@ namespace WebApplication3.Web.Controllers
         public IActionResult Update(int id)
         {
             var product=_context.Products.Find(id);
-            return View();
+            return View(product);
         }
 
         [HttpPost]
@@ -76,6 +76,7 @@ namespace WebApplication3.Web.Controllers
 
 
             _context.Products.Update(updateProduct);
+            _context.SaveChanges();
             return RedirectToAction("Index");
 
         }

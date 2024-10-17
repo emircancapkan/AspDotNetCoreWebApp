@@ -74,9 +74,9 @@ namespace WebApplication3.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(Product updateProduct){
+        public IActionResult Update(Product updateProduct, int productId){
 
-
+            updateProduct.Id = productId;
             _context.Products.Update(updateProduct);
             _context.SaveChanges();
             TempData["status"]="The Product is updated succesfully!";

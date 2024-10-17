@@ -1,0 +1,29 @@
+﻿@using WebApplication2.Models;
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+@model Product
+
+<h1>Add product</h1>
+
+<form asp-controller="Products" asp-action="Add" method="post">
+    <label>Product Name: </label>
+    <input type="text", asp-for="Name">
+    <br>
+
+    <label>Product Price: </label>
+    <input type="text", asp-for="Price">
+    <br>
+
+    <label>Product Stock: </label>
+    <input type="text", asp-for="Stock">
+    <br>
+
+    <label>Product Color: </label>
+    <input type="text", asp-for="Color">
+
+    <button type="submit">Add Product</button>
+</form>
+

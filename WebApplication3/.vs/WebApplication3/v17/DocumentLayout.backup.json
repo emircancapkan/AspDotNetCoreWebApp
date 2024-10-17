@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1AA0C389-4218-4147-B63D-4D6309649556}|WebApplication3.Web\\WebApplication3.Web.csproj|c:\\users\\badbo\\onedrive\\belgeler\\codes\\webapplication3\\webapplication3\\webapplication3.web\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1AA0C389-4218-4147-B63D-4D6309649556}|WebApplication3.Web\\WebApplication3.Web.csproj|solutionrelative:webapplication3.web\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AA0C389-4218-4147-B63D-4D6309649556}|WebApplication3.Web\\WebApplication3.Web.csproj|c:\\users\\badbo\\onedrive\\belgeler\\codes\\webapplication3\\webapplication3\\webapplication3.web\\models\\productrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AA0C389-4218-4147-B63D-4D6309649556}|WebApplication3.Web\\WebApplication3.Web.csproj|solutionrelative:webapplication3.web\\models\\productrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AA0C389-4218-4147-B63D-4D6309649556}|WebApplication3.Web\\WebApplication3.Web.csproj|c:\\users\\badbo\\onedrive\\belgeler\\codes\\webapplication3\\webapplication3\\webapplication3.web\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AA0C389-4218-4147-B63D-4D6309649556}|WebApplication3.Web\\WebApplication3.Web.csproj|solutionrelative:webapplication3.web\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication3.Web\\Views\\Products\\Index.cshtml",
+              "ToolTip": "C:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "WebApplication3.Web\\Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-10T07:42:56.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "WebApplication3.Web\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "WebApplication3.Web\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:37:45.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductRepo.cs",
+              "DocumentMoniker": "C:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\Models\\ProductRepo.cs",
+              "RelativeDocumentMoniker": "WebApplication3.Web\\Models\\ProductRepo.cs",
+              "ToolTip": "C:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\Models\\ProductRepo.cs",
+              "RelativeToolTip": "WebApplication3.Web\\Models\\ProductRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:37:11.45Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+﻿
+@using WebApplication3.Web.ViewModels;
+@model List<ProductListViewComponentModel>
+
+
+<a asp-controller="products" asp-action="index">Click there to insert products!</a>
+
+<br>
+
+<table class="table table-danger table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+
+        @foreach(var item in Model){
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+            </tr>
+        }
+
+    </tbody>
+</table>

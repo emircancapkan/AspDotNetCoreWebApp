@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Xml.Linq;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using WebApplication2.Models;
+using WebApplication3.Web.Helpers;
 using WebApplication3.Web.Models;
+
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace WebApplication3.Web.Controllers
 {
@@ -10,26 +13,18 @@ namespace WebApplication3.Web.Controllers
         //private readonly ProductRepo _productRepo;
 
         private AppDbContext _context;
+
         public ProductsController(AppDbContext context)
         {
             //_productRepo = new ProductRepo();
             _context= context;
 
-            /*if(!_context.Products.Any()){
-                _context.Products.Add(new Product() {Name="VW", Price=30000, Stock=200, Color="Red"}); 
-                _context.Products.Add(new Product() {Name="Audi", Price=20000, Stock=100, Color="Black"});  
-                _context.Products.Add(new Product() {Name="BMW", Price=40000, Stock=300, Color="Blue"});  
-                _context.Products.Add(new Product() {Name="Mercedes", Price=50000, Stock=500, Color="White"});  
-
-                _context.SaveChanges();
-            }*/
-           
 
         }
         public IActionResult Index()
         {
             var products = _context.Products.ToList();
-            
+
             return View(products);
             
         }
@@ -45,6 +40,22 @@ namespace WebApplication3.Web.Controllers
 
         [HttpGet]
         public IActionResult Add(){
+
+            ViewBag.ExpireDate = new Dictionary<string,int>(){
+                {"1 Month",1},
+                {"3 Month",3},
+                {"6 Month",6},
+                {"9 Month",9},
+                {"12 Month",12},
+            };
+
+            ViewBag.ColorSelect = new SelectList(new List<ColorSelectList>(){
+                new (){ Key= "Black" , Value="Black"},
+                new (){ Key = "Blue", Value="Blue"},
+                new (){ Key = "Red", Value="Red"},
+                new (){ Key = "White", Value="White"}
+            },"Value","Key");
+
             return View();
         }
 
@@ -59,7 +70,6 @@ namespace WebApplication3.Web.Controllers
 
             //2. yöntem
             //Product newProduct = new(){Name=Name,Price=Price,Stock=Stock,Color=Color};
-            
             _context.Products.Add(newProduct);
             _context.SaveChanges();
 
@@ -69,12 +79,31 @@ namespace WebApplication3.Web.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
+            
             var product=_context.Products.Find(id);
+
+            ViewBag.ExpireValue=product.Expire;
+            ViewBag.ExpireDate = new Dictionary<string,int>(){
+                {"1 Month",1},
+                {"3 Month",3},
+                {"6 Month",6},
+                {"9 Month",9},
+                {"12 Month",12},
+            };
+
+            ViewBag.ColorSelect = new SelectList(new List<ColorSelectList>(){
+                new (){ Key= "Black" , Value="Black"},
+                new (){ Key = "Blue", Value="Blue"},
+                new (){ Key = "Red", Value="Red"},
+                new (){ Key = "White", Value="White"}
+            },"Value","Key",product.Color);
+
             return View(product);
         }
 
         [HttpPost]
         public IActionResult Update(Product updateProduct, int productId){
+            
 
             updateProduct.Id = productId;
             _context.Products.Update(updateProduct);

@@ -1,28 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj": {}
+    "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj": {}
   },
   "projects": {
-    "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj": {
+    "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj",
+        "projectUniqueName": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj",
         "projectName": "WebApplication3.Web",
-        "projectPath": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj",
+        "projectPath": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj",
         "packagesPath": "C:\\Users\\badbo\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\obj\\",
+        "outputPath": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\badbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\badbo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

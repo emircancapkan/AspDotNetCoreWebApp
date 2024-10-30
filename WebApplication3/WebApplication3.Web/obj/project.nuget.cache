@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kUhFbaFjYpY=",
+  "dgSpecHash": "gExZOAFpmb4=",
   "success": true,
-  "projectFilePath": "c:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj",
+  "projectFilePath": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\badbo\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\badbo\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

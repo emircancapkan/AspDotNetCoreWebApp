@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using WebApplication3.Web.Helpers;
 using WebApplication3.Web.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,16 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlCon"));
 });
+
+//sadece bir kere bağlanır
+builder.Services.AddSingleton<IHelper,Helper>();
+
+//her bir requestte bağlanır ve response'a kadar açık kalır. Birden fazla nesne örneği aynı nesnedir
+builder.Services.AddScoped<IHelper,Helper>();
+
+//scope gibi çalışır fakat farklı nesne örnekleri üretir
+builder.Services.AddTransient<IHelper,Helper>();
+
 
 var app = builder.Build();
 

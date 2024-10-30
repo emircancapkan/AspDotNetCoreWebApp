@@ -11,5 +11,11 @@
         public int Stock { get; set; }
 
         public string? Color { get; set; }
+
+        public bool isPublished {get; set;}
+
+        public int? Expire{ get; set; }
+
+        public string? Description{ get; set; }
     }
 }

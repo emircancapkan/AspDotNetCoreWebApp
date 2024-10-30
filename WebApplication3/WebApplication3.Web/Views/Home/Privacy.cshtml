@@ -1,6 +1,19 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+﻿@using WebApplication3.Web.Models;
 
-<p>Use this page to detail your site's privacy policy.</p>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <partial name="~/PartialView/_ProductListPartialView.cshtml" model="ViewBag.ProductListPartialViewModel"></partial>
+    </div>
+</div>
+
+
+<div class="col-md-4">
+    @await Component.InvokeAsync("ProductList", new {type=2} );
+</div>
+
+
+

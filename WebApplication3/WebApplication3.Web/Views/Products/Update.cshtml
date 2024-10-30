@@ -8,25 +8,46 @@
 
 <h1>Update Product</h1>
 
-<form asp-controller="Products" asp-action="Update" asp-route-productId="@Model.Id" method="post">
-    <input type="hidden" asp-for="Id">
-    
-    <label>Product Name: </label>
+<form asp-controller="Products" asp-action="Update" method="post">
+    <label asp-for="Name">Product Name: </label>
     <input type="text", asp-for="Name">
     <br>
 
-    <label>Product Price: </label>
+    <label asp-for="Price">Product Price: </label>
     <input type="text", asp-for="Price">
     <br>
 
-    <label>Product Stock: </label>
+    <label asp-for="Stock">Product Stock: </label>
     <input type="text", asp-for="Stock">
     <br>
 
-    <label>Product Color: </label>
-    <input type="text", asp-for="Color">
+    <select style="margin-bottom: 10px;" asp-for="Color" asp-items="@ViewBag.ColorSelect">
+        <option value="">Select Color</option>
+    </select>
 
-    <button type="submit">Update Product</button>
+    <div class="form-floating" style="margin-bottom: 10px;">
+        <textarea asp-for="Description" class="form-control" placeholder="Description" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Comments</label>
+    </div>
+
+    <div class="input-group-text">_
+        <label asp-for="isPublished">Do you want to publish the product?</label>
+        <input class="form-check-input mt-0" asp-for="isPublished">
+    </div>
+
+    <div class="mb-3 mt-3">
+        <span>How long it will be in sale?</span>
+        @foreach(var items in ViewBag.ExpireDate as Dictionary<string,int>){
+            <div class="form-check">
+            <input checked=@(items.Value == ViewBag.ExpireValue ? true : false) class="form-check-input" type="radio" asp-for="Expire" id="Expire @items.Value" value="@items.Value">
+                <label class="form-check-label" asp-for=Expire for="Expire @items.Value">
+                    @items.Key
+                </label>
+            </div>
+        }
+    </div>
+  
+    <button type="submit">Add Product</button>
 </form>
 
 

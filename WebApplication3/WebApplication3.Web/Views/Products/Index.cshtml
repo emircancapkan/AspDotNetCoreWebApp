@@ -3,17 +3,18 @@
     ViewData["Title"] = "Index";
 }
 
-@model  List<Product>
+@model List<Product>
 
 <h1>Goods</h1>
-@if(TempData["status"]!=null){
+
+@if(TempData["status"] != null)
+{
     <div class="alert alert-success" role="alert">
         @TempData["status"]
     </div>
 }
 
 <a asp-controller="products" asp-action="add">Add</a>
-
 
 <table class="table">
     <thead>
@@ -22,23 +23,45 @@
             <th>Price</th>
             <th>Stock</th>
             <th>Color</th>
-            <th>    </th>
+            <th>Publish</th>
+            <th>Expire in</th>
+            <th>Description</th>
+            <th>Actions</th>
         </tr>
     </thead>
 
-    @foreach(var item in Model)
-    {
-        <tr>
-            <td>@item.Name</td>
-            <td>@item.Price</td>
-            <td>@item.Stock</td>
-            <td>@item.Color</td>
-            <td>
-                <a asp-controller="products" asp-action="remove" asp-route-id="@item.Id">Delete</a>
-                <a asp-controller="products" asp-action="update" asp-route-id="@item.Id">Update</a>
-            </td>
-        </tr>
-    }
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Stock</td>
+                <td>@item.Color</td>
+                
+                <td>
+                    @(item.isPublished?"Yes":"No")
+                </td>
+
+                <td>
+                    @if (item.Expire.HasValue)
+                    {
+                        var date = DateTime.Now.AddMonths(item.Expire.Value);
+                        @date.ToString("dd/MM/yyyy")
+                    }
+                    else
+                    {
+                        <p>No expiration</p>
+                    }
+                </td>
+
+                <td>@item.Description</td>
+
+                <td>
+                    <a asp-controller="products" asp-action="remove" asp-route-id="@item.Id">Delete</a>
+                    <a asp-controller="products" asp-action="update" asp-route-id="@item.Id">Update</a>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
-
-

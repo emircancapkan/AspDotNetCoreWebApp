@@ -1,3 +1,4 @@
+using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using WebApplication3.Web.Helpers;
 using WebApplication3.Web.Models;
@@ -21,6 +22,7 @@ builder.Services.AddScoped<IHelper,Helper>();
 //scope gibi çalışır fakat farklı nesne örnekleri üretir
 builder.Services.AddTransient<IHelper,Helper>();
 
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 

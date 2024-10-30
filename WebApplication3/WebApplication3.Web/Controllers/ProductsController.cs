@@ -5,6 +5,8 @@ using WebApplication3.Web.Helpers;
 using WebApplication3.Web.Models;
 
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using AutoMapper;
+using WebApplication3.Web.ViewModels;
 
 namespace WebApplication3.Web.Controllers
 {
@@ -14,10 +16,13 @@ namespace WebApplication3.Web.Controllers
 
         private AppDbContext _context;
 
-        public ProductsController(AppDbContext context)
+        private readonly IMapper _mapper;
+        public ProductsController(AppDbContext context, IMapper mapper)
         {
             //_productRepo = new ProductRepo();
             _context= context;
+
+            _mapper=mapper;
 
 
         }
@@ -25,7 +30,7 @@ namespace WebApplication3.Web.Controllers
         {
             var products = _context.Products.ToList();
 
-            return View(products);
+            return View(_mapper.Map<List<ProductViewModel>>(products));
             
         }
 
@@ -60,7 +65,7 @@ namespace WebApplication3.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(Product newProduct) {
+        public IActionResult Add(ProductViewModel newProduct) {
             
             //1.yöntem
             /*var name =  HttpContext.Request.Form["Name"].ToString();
@@ -70,10 +75,34 @@ namespace WebApplication3.Web.Controllers
 
             //2. yöntem
             //Product newProduct = new(){Name=Name,Price=Price,Stock=Stock,Color=Color};
-            _context.Products.Add(newProduct);
-            _context.SaveChanges();
 
-            return RedirectToAction("Index");
+            if(ModelState.IsValid){
+                _context.Products.Add(_mapper.Map<Product>(newProduct));
+                _context.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+            else{
+            
+                ViewBag.ExpireDate = new Dictionary<string,int>(){
+                    {"1 Month",1},
+                    {"3 Month",3},
+                    {"6 Month",6},
+                    {"9 Month",9},
+                    {"12 Month",12},
+                };
+
+                ViewBag.ColorSelect = new SelectList(new List<ColorSelectList>(){
+                    new (){ Key= "Black" , Value="Black"},
+                    new (){ Key = "Blue", Value="Blue"},
+                    new (){ Key = "Red", Value="Red"},
+                    new (){ Key = "White", Value="White"}
+                },"Value","Key");
+
+                return View();
+
+            }
+
         }
 
         [HttpGet]
@@ -111,6 +140,20 @@ namespace WebApplication3.Web.Controllers
             TempData["status"]="The Product is updated succesfully!";
             return RedirectToAction("Index");
 
+        }
+
+        [HttpGet]
+        [HttpPost]
+        public IActionResult HasProductName(string Name){
+            var anyproduct=_context.Products.Any(x=>x.Name.ToLower()==Name.ToLower());
+
+            if(anyproduct){
+                return Json("The product name is available in the database");
+            }
+
+            else{
+                return Json(true);
+            }
         }
     }
 }

@@ -18,6 +18,8 @@
 
     <label asp-for="Stock">Product Stock: </label>
     <input type="text", asp-for="Stock">
+    <span class="text-danger" asp-validation-for="Stock"></span>
+
     <br>
 
     <select style="margin-bottom: 10px;" asp-for="Color" asp-items="@ViewBag.ColorSelect">

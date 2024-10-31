@@ -127,14 +127,33 @@ namespace WebApplication3.Web.Controllers
                 new (){ Key = "White", Value="White"}
             },"Value","Key",product.Color);
 
-            return View(product);
+            return View(_mapper.Map<ProductViewModel>(product));
         }
 
         [HttpPost]
-        public IActionResult Update(Product updateProduct, int productId){
-            
+        public IActionResult Update(Product updateProduct){
 
-            updateProduct.Id = productId;
+            if(!ModelState.IsValid){
+
+                ViewBag.ExpireValue=updateProduct.Expire;
+                ViewBag.ExpireDate = new Dictionary<string,int>(){
+                    {"1 Month",1},
+                    {"3 Month",3},
+                    {"6 Month",6},
+                    {"9 Month",9},
+                    {"12 Month",12},
+                };
+
+                ViewBag.ColorSelect = new SelectList(new List<ColorSelectList>(){
+                    new (){ Key= "Black" , Value="Black"},
+                    new (){ Key = "Blue", Value="Blue"},
+                    new (){ Key = "Red", Value="Red"},
+                    new (){ Key = "White", Value="White"}
+                },"Value","Key",updateProduct.Color);
+
+                    return View();
+            }
+
             _context.Products.Update(updateProduct);
             _context.SaveChanges();
             TempData["status"]="The Product is updated succesfully!";

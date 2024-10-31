@@ -16,7 +16,7 @@ public class ProductViewModel
 
         public decimal Price { get; set; }
 
-        [Range(1,2^16, ErrorMessage = "The Stock must be bigger than 0.")]
+        [Range(1,300, ErrorMessage = "The Stock must be between 1 and 300")]
         public int Stock { get; set; }
 
         public string? Color { get; set; }

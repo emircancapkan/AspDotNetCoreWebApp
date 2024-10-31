@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fdf3UzwD67Q=",
+  "dgSpecHash": "dfazv+VVZIg=",
   "success": true,
-  "projectFilePath": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj",
+  "projectFilePath": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\badbo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\badbo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

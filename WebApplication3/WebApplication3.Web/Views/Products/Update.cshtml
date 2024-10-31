@@ -4,13 +4,18 @@
     ViewData["Title"] = "Update";
 }
 
-@model Product
+@model ProductViewModel
 
 <h1>Update Product</h1>
 
 <form asp-controller="Products" asp-action="Update" method="post">
+
+    <input type="hidden" asp-for="Id">
+    
     <label asp-for="Name">Product Name: </label>
     <input type="text", asp-for="Name">
+    <span class="text-danger" asp-validation-for="Name"></span>
+
     <br>
 
     <label asp-for="Price">Product Price: </label>
@@ -19,6 +24,8 @@
 
     <label asp-for="Stock">Product Stock: </label>
     <input type="text", asp-for="Stock">
+    <span class="text-danger" asp-validation-for="Stock"></span>
+
     <br>
 
     <select style="margin-bottom: 10px;" asp-for="Color" asp-items="@ViewBag.ColorSelect">
@@ -46,8 +53,19 @@
             </div>
         }
     </div>
+
+        
+    <label asp-for="Email">E-mail: </label>
+    <input type="text", asp-for="Email">
+    <span class="text-danger" asp-validation-for="Email"></span>
+    <br>
   
     <button type="submit">Add Product</button>
 </form>
+
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
 
 

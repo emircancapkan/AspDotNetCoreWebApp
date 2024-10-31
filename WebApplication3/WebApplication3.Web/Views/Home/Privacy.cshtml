@@ -1,7 +1,7 @@
 ﻿@using WebApplication3.Web.Models;
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Privacy";
 }
 
 <div class="row">
@@ -12,7 +12,11 @@
 
 
 <div class="col-md-4">
-    @await Component.InvokeAsync("ProductList", new {type=2} );
+    
+    @*other way*@
+    @*@await Component.InvokeAsync("ProductList", new {type=2} )*@
+
+    <vc:product-list type="2"></vc:product-list>
 </div>
 
 

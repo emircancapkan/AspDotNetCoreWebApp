@@ -8,5 +8,7 @@ namespace WebApplication3.Web.Models
         public AppDbContext(DbContextOptions<AppDbContext> options):base(options){}
 
         public DbSet<Product> Products  { get; set; }
+
+        public DbSet<Visitors> Visitors {get; set;}
     }
 }

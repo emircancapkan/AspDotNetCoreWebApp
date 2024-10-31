@@ -1,19 +1,27 @@
 ﻿@using WebApplication3.Web.Models;
 
 @{
-    ViewData["Title"] = "Privacy";
+    ViewData["Title"] = "Home Page";
 }
 
 <div class="row">
     <div class="col-md-4">
         <partial name="~/PartialView/_ProductListPartialView.cshtml" model="ViewBag.ProductListPartialViewModel"></partial>
     </div>
+
+    <div class="col-md-4">
+        @*Other way*@
+        @*@await Component.InvokeAsync("ProductList", new {type=1} );*@
+
+        <vc:product-list type="1"></vc:product-list>
+    </div>
 </div>
 
 
-<div class="col-md-4">
-    @await Component.InvokeAsync("ProductList", new {type=1} );
-</div>
+
+
+
+
 
 
 

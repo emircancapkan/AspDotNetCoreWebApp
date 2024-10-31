@@ -6,6 +6,7 @@ using WebApplication3.Web.ViewModels;
 
 namespace WebApplication3.Web.Views.Shared.ViewComponents;
 
+
 public class ProductListViewComponent:ViewComponent
 {
     private readonly AppDbContext _context;

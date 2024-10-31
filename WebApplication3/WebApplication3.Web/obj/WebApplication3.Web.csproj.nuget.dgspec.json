@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj": {}
+    "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj": {
+    "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj",
+        "projectUniqueName": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj",
         "projectName": "WebApplication3.Web",
-        "projectPath": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj",
+        "projectPath": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\WebApplication3.Web.csproj",
         "packagesPath": "C:\\Users\\badbo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\obj\\",
+        "outputPath": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\badbo\\AppData\\Roaming\\NuGet\\NuGet.Config"

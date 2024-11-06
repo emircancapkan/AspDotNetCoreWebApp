@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Home Page";
+    var product=new Product() {Id=1,Name="Renault",Price=5000,Stock=500};
 }
 
 <div class="row">
@@ -15,6 +16,12 @@
 
         <vc:product-list type="1"></vc:product-list>
     </div>
+
+    <italic>emircan</italic>
+    <product-show product="@product"></product-show>
+    <img src="C:/Users/badbo/OneDrive/Desktop/car.jpg">
+    <image-thumbnail image-src="C:/Users/badbo/OneDrive/Desktop/car.jpg"></image-thumbnail>
+
 </div>
 
 

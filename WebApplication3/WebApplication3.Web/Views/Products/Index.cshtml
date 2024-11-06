@@ -59,6 +59,7 @@
                 <td>
                     <a asp-controller="products" asp-action="remove" asp-route-id="@item.Id">Delete</a>
                     <a asp-controller="products" asp-action="update" asp-route-id="@item.Id">Update</a>
+                    <a asp-controller="products" asp-action="getbyid" asp-route-productid="@item.Id">Go for detailed</a>
                 </td>
             </tr>
         }

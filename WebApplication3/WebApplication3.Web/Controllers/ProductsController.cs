@@ -161,6 +161,12 @@ namespace WebApplication3.Web.Controllers
 
         }
 
+        public IActionResult GetById(int productid){
+            var product=_context.Products.Find(productid);
+
+            return View(_mapper.Map<ProductViewModel>(product));
+        }
+
         [HttpGet]
         [HttpPost]
         public IActionResult HasProductName(string Name){

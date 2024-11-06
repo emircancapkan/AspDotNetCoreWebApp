@@ -1,0 +1,27 @@
+﻿
+@{
+
+    ViewData["Title"] = "GetById";
+}
+
+@model ProductViewModel
+
+<a class="btn btn-primary mb-2" asp-controller="products" asp-action="index">Back</a>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">@Model.Name</h5>
+    <p class="card-text">
+        <p>ID : @Model.Id</p>
+
+        @if(Model.Description!=null){
+          <p>Description : @Model.Description</p>
+        }
+
+        <p>Price : @Model.Price</p>
+        <p>Stock : @Model.Stock</p>
+        <p>Expire : @Model.Expire</p>
+    </p>
+    <a href="#" class="card-link">Buy</a>
+  </div>
+</div>

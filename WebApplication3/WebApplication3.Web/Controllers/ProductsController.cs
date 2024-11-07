@@ -10,7 +10,7 @@ using WebApplication3.Web.ViewModels;
 
 namespace WebApplication3.Web.Controllers
 {
-    [Route("[controller]/[action]")]
+
     public class ProductsController : Controller
     {
         //private readonly ProductRepo _productRepo;
@@ -166,8 +166,7 @@ namespace WebApplication3.Web.Controllers
         }
 
 
-        [HttpGet("{productid}")]
-        //[Route("[controller]/[action]/{productid}", Name = "getbyid")]
+        [Route("[controller]/[action]/{productid}", Name = "getbyid")]
         public IActionResult GetById(int productid){
             var product=_context.Products.Find(productid);
 

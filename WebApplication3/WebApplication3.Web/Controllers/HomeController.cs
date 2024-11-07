@@ -3,10 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebApplication3.Web.Models;
 using WebApplication3.Web.ViewModels;
+using WebApplication3.Web.Filters;
 
 namespace WebApplication3.Web.Controllers
 {
 
+    [LogFilter]
+    [Route("[controller]/[action]")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -21,7 +24,7 @@ namespace WebApplication3.Web.Controllers
             _mapper=mapper;
         }
 
-
+        [Route("/")]
         public IActionResult Index()
         {
             // Veritabanından ürünleri getir

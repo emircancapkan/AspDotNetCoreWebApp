@@ -1,19 +1,12 @@
 ﻿@{
-    ViewData["Title"] = "Index";
+
+    ViewData["Title"]= "Pages";
 }
 
 @model List<ProductViewModel>
 
-<h1>Goods</h1>
-
-@if(TempData["status"] != null)
-{
-    <div class="alert alert-success" role="alert">
-        @TempData["status"]
-    </div>
-}
-
-<a asp-controller="products" asp-action="add">Add</a>
+<p>@ViewBag.Page</p>
+<p>@ViewBag.pageSize</p>
 
 <table class="table">
     <thead>
@@ -65,5 +58,3 @@
         }
     </tbody>
 </table>
-
-<a asp-controller="products" asp-action="pages" asp-route-page="1" asp-route-pagesize="3">Page 1 pagesize 3</a>

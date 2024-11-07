@@ -1,4 +1,5 @@
 using System.Reflection;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApplication3.Web.Helpers;
 using WebApplication3.Web.Models;
@@ -40,6 +41,19 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "productPages",
+    pattern: "blog/{*article}",
+    defaults: new{controller="blog",action="article"});
+
+app.MapControllerRoute(
+    name: "productPages",
+    pattern: "{controller}/{action}/{page}/{pageSize}");
+
+app.MapControllerRoute(
+    name: "getbyid",
+    pattern: "{controller}/{action}/{productid}");
 
 app.MapControllerRoute(
     name: "default",

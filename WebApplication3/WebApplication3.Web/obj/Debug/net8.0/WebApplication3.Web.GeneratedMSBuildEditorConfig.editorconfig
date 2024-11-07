@@ -30,6 +30,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFydGlhbFZpZXdcX1Byb2R1Y3RMaXN0UGFydGlhbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[c:/Users/badbo/OneDrive/Documents/GitHub/AspDotNetCoreWebApp/WebApplication3/WebApplication3.Web/Views/Blog/Article.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xBcnRpY2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/badbo/OneDrive/Documents/GitHub/AspDotNetCoreWebApp/WebApplication3/WebApplication3.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [c:/Users/badbo/OneDrive/Documents/GitHub/AspDotNetCoreWebApp/WebApplication3/WebApplication3.Web/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/badbo/OneDrive/Documents/GitHub/AspDotNetCoreWebApp/WebApplication3/WebApplication3.Web/Views/Products/Pages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcUGFnZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/badbo/OneDrive/Documents/GitHub/AspDotNetCoreWebApp/WebApplication3/WebApplication3.Web/Views/Products/Update.cshtml]

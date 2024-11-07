@@ -167,6 +167,19 @@ namespace WebApplication3.Web.Controllers
             return View(_mapper.Map<ProductViewModel>(product));
         }
 
+
+        public IActionResult Pages(int page, int pageSize){
+            
+            //page 1 pagesize=3
+            //page 2 pagesize=3
+            var products=_context.Products.Skip((page-1)*pageSize).Take(pageSize).ToList();
+
+            ViewBag.Page=page;
+            ViewBag.pageSize=pageSize;
+            
+            return View(_mapper.Map<List<ProductViewModel>>(products));
+        }
+
         [HttpGet]
         [HttpPost]
         public IActionResult HasProductName(string Name){

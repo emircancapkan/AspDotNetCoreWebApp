@@ -6,6 +6,7 @@ using WebApplication3.Web.ViewModels;
 
 namespace WebApplication3.Web.Controllers
 {
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -19,6 +20,7 @@ namespace WebApplication3.Web.Controllers
             _context = context;
             _mapper=mapper;
         }
+
 
         public IActionResult Index()
         {

@@ -10,6 +10,7 @@ using WebApplication3.Web.ViewModels;
 
 namespace WebApplication3.Web.Controllers
 {
+    [Route("[controller]/[action]")]
     public class ProductsController : Controller
     {
         //private readonly ProductRepo _productRepo;
@@ -26,6 +27,9 @@ namespace WebApplication3.Web.Controllers
 
 
         }
+
+
+
         public IActionResult Index()
         {
             var products = _context.Products.ToList();
@@ -161,6 +165,9 @@ namespace WebApplication3.Web.Controllers
 
         }
 
+
+        [HttpGet("{productid}")]
+        //[Route("[controller]/[action]/{productid}", Name = "getbyid")]
         public IActionResult GetById(int productid){
             var product=_context.Products.Find(productid);
 
@@ -168,6 +175,7 @@ namespace WebApplication3.Web.Controllers
         }
 
 
+        [Route("[controller]/[action]/{page}/{pageSize}")]
         public IActionResult Pages(int page, int pageSize){
             
             //page 1 pagesize=3

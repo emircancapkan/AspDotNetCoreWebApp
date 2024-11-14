@@ -1,6 +1,7 @@
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebApplication3.Web.Filters;
 using WebApplication3.Web.Helpers;
 using WebApplication3.Web.Models;
 
@@ -24,6 +25,8 @@ builder.Services.AddScoped<IHelper,Helper>();
 builder.Services.AddTransient<IHelper,Helper>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+builder.Services.AddScoped<NotFoundFilter>();
 
 var app = builder.Build();
 

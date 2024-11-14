@@ -7,6 +7,7 @@ using WebApplication3.Web.Models;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using AutoMapper;
 using WebApplication3.Web.ViewModels;
+using WebApplication3.Web.Filters;
 
 namespace WebApplication3.Web.Controllers
 {
@@ -37,7 +38,8 @@ namespace WebApplication3.Web.Controllers
             return View(_mapper.Map<List<ProductViewModel>>(products));
             
         }
-
+        
+        [ServiceFilter(typeof(NotFoundFilter))]
         public IActionResult Remove(int id)
         {
             var product = _context.Products.Find(id);
@@ -110,6 +112,7 @@ namespace WebApplication3.Web.Controllers
         }
 
         [HttpGet]
+        [ServiceFilter(typeof(NotFoundFilter))]
         public IActionResult Update(int id)
         {
             
@@ -166,6 +169,8 @@ namespace WebApplication3.Web.Controllers
         }
 
 
+        //not found filter içinde bir parametre (context) olduğu için ServiceFilter kullanırız
+        [ServiceFilter(typeof(NotFoundFilter))]
         [Route("[controller]/[action]/{productid}", Name = "getbyid")]
         public IActionResult GetById(int productid){
             var product=_context.Products.Find(productid);

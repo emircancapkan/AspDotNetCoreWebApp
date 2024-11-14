@@ -7,7 +7,7 @@ using WebApplication3.Web.Filters;
 
 namespace WebApplication3.Web.Controllers
 {
-
+    [CustomResultFilter("x-version","1.0")]
     [LogFilter]
     [Route("[controller]/[action]")]
     public class HomeController : Controller
@@ -46,9 +46,11 @@ namespace WebApplication3.Web.Controllers
             return View();
         }
 
-
+        [CustomExceptionFilter]
         public IActionResult Privacy()
         {
+                 
+            throw new Exception("There occured database error!");
                        // Veritabanından ürünleri getir
             var products = _context.Products.OrderByDescending(x => x.Id).Select(x => new ProductPartialViewModel
             {
@@ -93,9 +95,17 @@ namespace WebApplication3.Web.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Error(ErrorViewModel errorViewModel)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (errorViewModel == null)
+            {
+                errorViewModel = new ErrorViewModel();
+            }
+
+            errorViewModel.RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+
+            return View(errorViewModel);
         }
+
     }
 }

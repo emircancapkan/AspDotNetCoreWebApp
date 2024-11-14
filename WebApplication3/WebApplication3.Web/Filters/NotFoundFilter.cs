@@ -24,7 +24,9 @@ public class NotFoundFilter:ActionFilterAttribute
         var hasProduct=_context.Products.Any(x=>x.Id==id);
 
         if(hasProduct==null){
-            context.Result=new RedirectToActionResult("Error","Home",null);
+            context.Result=new RedirectToActionResult("Error","Home", new ErrorViewModel(){
+                Errors= new List <string>(){$"id({id}) is not found in the database"}
+            });
             
         }
         

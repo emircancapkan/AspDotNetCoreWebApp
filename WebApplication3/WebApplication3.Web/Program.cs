@@ -1,8 +1,10 @@
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using WebApplication3.Web.Filters;
 using WebApplication3.Web.Helpers;
+using WebApplication3.Web.Middlewares;
 using WebApplication3.Web.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +19,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 //sadece bir kere bağlanır
 builder.Services.AddSingleton<IHelper,Helper>();
+
+builder.Services.AddSingleton<IFileProvider>(new PhysicalFileProvider(Directory.GetCurrentDirectory()));
 
 //her bir requestte bağlanır ve response'a kadar açık kalır. Birden fazla nesne örneği aynı nesnedir
 builder.Services.AddScoped<IHelper,Helper>();
@@ -66,5 +70,81 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 
+#region Use ve Run kullanımı
+/*
+app.Use(async(context, next)=>{
+    await context.Response.WriteAsync("Before 1. middleware\n");
+
+    await next();
+
+    await context.Response.WriteAsync("After 1. middleware\n");
+});
+
+app.Use(async(context, next)=>{
+    await context.Response.WriteAsync("Before 2. middleware\n");
+
+    await next();
+
+    await context.Response.WriteAsync("After 2. middleware\n");
+});
+
+
+
+app.Run(async(context)=>{
+    await context.Response.WriteAsync("Terminal 3. middleware\n");
+});*/
+
+
+//map ile sadece example url'inde çalışan middleware yapıyoruz.
+
+#endregion
+
+#region Map kullanımı ve use ve run
+app.Map("/example", app=>{
+
+
+    app.Use(async(context, next)=>{
+        await context.Response.WriteAsync("Before 1. middleware\n");
+
+        await next();
+
+        await context.Response.WriteAsync("After 1. middleware\n");
+    });
+
+    app.Use(async(context, next)=>{
+        await context.Response.WriteAsync("Before 2. middleware\n");
+
+        await next();
+
+        await context.Response.WriteAsync("After 2. middleware\n");
+    });
+
+
+    app.Run(async(context)=>{
+        await context.Response.WriteAsync("Terminal 3. middleware\n");
+    });
+
+});
+
+#endregion
+
+#region MapWhen kullanımı
+
+//eğer urlde query olarak name varsa bu middleware çalışır. Örneğin:
+//https://localhost:7143/?name=ahmet
+app.MapWhen(context=>context.Request.Query.ContainsKey("name"),app=>{
+    app.Use(async(context,next)=>{
+        await context.Response.WriteAsync("Before 1. middleware\n");
+        await next();
+        await context.Response.WriteAsync("After 1. middleware\n");
+
+    });
+
+    app.Run(async (context)=>{
+        await context.Response.WriteAsync("Terminal 3. middleware\n");
+    });
+});
+
+#endregion
 
 app.Run();

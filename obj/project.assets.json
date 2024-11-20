@@ -4045,22 +4045,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3.csproj",
+      "projectUniqueName": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3.csproj",
       "projectName": "WebApplication3",
-      "projectPath": "C:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\WebApplication3.csproj",
+      "projectPath": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3.csproj",
       "packagesPath": "C:\\Users\\badbo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\badbo\\OneDrive\\Belgeler\\codes\\WebApplication3\\obj\\",
+      "outputPath": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\badbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\badbo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

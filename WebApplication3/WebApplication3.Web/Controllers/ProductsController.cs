@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using AutoMapper;
 using WebApplication3.Web.ViewModels;
 using WebApplication3.Web.Filters;
+using Microsoft.Extensions.FileProviders;
 
 namespace WebApplication3.Web.Controllers
 {
@@ -16,17 +17,16 @@ namespace WebApplication3.Web.Controllers
     {
         //private readonly ProductRepo _productRepo;
 
+        private readonly IFileProvider _fileprovider;
         private AppDbContext _context;
 
         private readonly IMapper _mapper;
-        public ProductsController(AppDbContext context, IMapper mapper)
+        public ProductsController(AppDbContext context, IMapper mapper, IFileProvider fileprovider)
         {
             //_productRepo = new ProductRepo();
-            _context= context;
-
-            _mapper=mapper;
-
-
+            _context = context;
+            _mapper = mapper;
+            _fileprovider = fileprovider;
         }
 
 

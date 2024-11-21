@@ -25,8 +25,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\images\\891da918-53d7-4476-b92c-03e520c4817f.jpg",
+      "PackagePath": "staticwebassets\\images\\891da918-53d7-4476-b92c-03e520c4817f.jpg"
+    },
+    {
       "Id": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\images\\car1.jpg",
       "PackagePath": "staticwebassets\\images\\car1.jpg"
+    },
+    {
+      "Id": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\images\\noImage.jpg",
+      "PackagePath": "staticwebassets\\images\\noImage.jpg"
     },
     {
       "Id": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\js\\site.js",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wLCQO5uZNGeHVXh2UUg0e6drbBGwqICXAKEgWlg3lyU=",
+  "Hash": "3CeDsLFcPMb303TMPCTnsdsl+4tnqE8mkB+qsCdfc4g=",
   "Source": "WebApplication3.Web",
   "BasePath": "_content/WebApplication3.Web",
   "Mode": "Default",
@@ -150,6 +150,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\images\\891da918-53d7-4476-b92c-03e520c4817f.jpg",
+      "SourceId": "WebApplication3.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\",
+      "BasePath": "_content/WebApplication3.Web",
+      "RelativePath": "images/891da918-53d7-4476-b92c-03e520c4817f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\891da918-53d7-4476-b92c-03e520c4817f.jpg"
+    },
+    {
       "Identity": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\images\\car1.jpg",
       "SourceId": "WebApplication3.Web",
       "SourceType": "Discovered",
@@ -167,6 +186,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\car1.jpg"
+    },
+    {
+      "Identity": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\images\\noImage.jpg",
+      "SourceId": "WebApplication3.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\",
+      "BasePath": "_content/WebApplication3.Web",
+      "RelativePath": "images/noImage.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\noImage.jpg"
     },
     {
       "Identity": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\js\\site.js",

@@ -5,13 +5,11 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace WebApplication3.Web.ViewModels;
 
-public class ProductViewModel
+public class ProductUpdateViewModel
 {
 
         public int Id { get; set; }
 
-
-        [Remote(action:"HasProductName", controller:"Products")]
         [Required(ErrorMessage = "This section cannot be blank")]
         public string? Name { get; set; }
 

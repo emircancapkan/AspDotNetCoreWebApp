@@ -3,7 +3,7 @@
 }
 
 @model List<ProductViewModel>
-
+    
 <h1>Goods</h1>
 
 @if(TempData["status"] != null)
@@ -33,17 +33,19 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
+            <tr >
+                <td style="display: flex; justify-content: center; align-items: center; height: 120px;">
                     @if(!String.IsNullOrEmpty(item.ImagePath)){
-                        <img style="width: 100px; height: 100px; align-items: center;" src="/images/@(item.ImagePath)"></img>
+                        <img style="width: 100px; height: 100px;" src="/images/@(item.ImagePath)"></img>
+                    }
+                    else{
+                        <img style="width: 100px; height: 100px;" src="/images/noImage.jpg"></img>
                     }
                 </td>
                 <td>@item.Name</td>
                 <td>@item.Price</td>
                 <td>@item.Stock</td>
                 <td>@item.Color</td>
-                
                 <td>
                     @(item.isPublished?"Yes":"No")
                 </td>

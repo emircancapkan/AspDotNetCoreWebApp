@@ -4,13 +4,23 @@
     ViewData["Title"] = "Update";
 }
 
-@model ProductViewModel
+@model ProductUpdateViewModel
 
 <h1>Update Product</h1>
 
-<form asp-controller="Products" asp-action="Update" method="post">
+<form asp-controller="Products" asp-action="Update" method="post" enctype="multipart/form-data">
 
     <input type="hidden" asp-for="Id">
+    <input type="hidden" asp-for="ImagePath">
+
+    <td style="display: flex; justify-content: center; align-items: center; height: 120px;">
+        @if(!String.IsNullOrEmpty(Model.ImagePath)){
+            <img style="width: 100px; height: 100px;" src="/images/@(Model.ImagePath)"></img>
+        }
+        else{
+            <img style="width: 100px; height: 100px;" src="/images/noImage.jpg"></img>
+        }
+    </td>
     
     <label asp-for="Name">Product Name: </label>
     <input type="text", asp-for="Name">
@@ -35,6 +45,11 @@
     <div class="form-floating" style="margin-bottom: 10px;">
         <textarea asp-for="Description" class="form-control" placeholder="Description" id="floatingTextarea2" style="height: 100px"></textarea>
         <label for="floatingTextarea2">Comments</label>
+    </div>
+
+    <div> 
+        <label for="formFileLg" class="form-label">Select an Image</label>
+        <input class="form-control form-control-lg" asp-for=Image type="file">
     </div>
 
     <div class="input-group-text">_

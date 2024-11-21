@@ -87,15 +87,23 @@ namespace WebApplication3.Web.Controllers
             if(ModelState.IsValid){
                 try
                 {
-                    var root = _fileprovider.GetDirectoryContents("wwwroot");
-                    var images = root.First(x => x.Name == "images");
-                    var path = Path.Combine(images.PhysicalPath, newProduct.Image.FileName);
-
-                    using var stream = new FileStream(path, FileMode.Create);
-                    newProduct.Image.CopyTo(stream);
 
                     var product = _mapper.Map<Product>(newProduct);
-                    product.ImagePath = newProduct.Image.FileName;
+
+                    if(newProduct.Image!=null && newProduct.Image.Length>0){
+                        var root = _fileprovider.GetDirectoryContents("wwwroot");
+                        var images = root.First(x => x.Name == "images");
+                        
+                        //eğer 2 tane aynı isimli görsel varsa bir tanesine rastgele isim atar
+                        var RandomImageNames=Guid.NewGuid() + Path.GetExtension(newProduct.Image.FileName);
+
+                        var path = Path.Combine(images.PhysicalPath, RandomImageNames);
+
+                        using var stream = new FileStream(path, FileMode.Create);
+                        newProduct.Image.CopyTo(stream);
+                        product.ImagePath = newProduct.Image.FileName;
+                    }
+
 
                     _context.Products.Add(product);
                     _context.SaveChanges();
@@ -168,16 +176,16 @@ namespace WebApplication3.Web.Controllers
                 new (){ Key = "White", Value="White"}
             },"Value","Key",product.Color);
 
-            return View(_mapper.Map<ProductViewModel>(product));
+            return View(_mapper.Map<ProductUpdateViewModel>(product));
         }
 
         [HttpPost]
-        public IActionResult Update(Product updateProduct){
-
-            if(!ModelState.IsValid){
-
-                ViewBag.ExpireValue=updateProduct.Expire;
-                ViewBag.ExpireDate = new Dictionary<string,int>(){
+        public IActionResult Update(ProductViewModel updateProduct)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.ExpireValue = updateProduct.Expire;
+                ViewBag.ExpireDate = new Dictionary<string, int>(){
                     {"1 Month",1},
                     {"3 Month",3},
                     {"6 Month",6},
@@ -190,17 +198,37 @@ namespace WebApplication3.Web.Controllers
                     new (){ Key = "Blue", Value="Blue"},
                     new (){ Key = "Red", Value="Red"},
                     new (){ Key = "White", Value="White"}
-                },"Value","Key",updateProduct.Color);
+                }, "Value", "Key", updateProduct.Color);
 
-                    return View();
+                return View();
             }
 
-            _context.Products.Update(updateProduct);
-            _context.SaveChanges();
-            TempData["status"]="The Product is updated succesfully!";
-            return RedirectToAction("Index");
+            if (updateProduct.Image != null && updateProduct.Image.Length > 0)
+            {
+                var root = _fileprovider.GetDirectoryContents("wwwroot");
+                var images = root.First(x => x.Name == "images");
 
+                // Rastgele isim oluşturuluyor
+                var RandomImageNames = Guid.NewGuid() + Path.GetExtension(updateProduct.Image.FileName);
+
+                var path = Path.Combine(images.PhysicalPath, RandomImageNames);
+
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    updateProduct.Image.CopyTo(stream);
+                }
+
+                // Yolu veritabanında saklamak için ImagePath'e atıyoruz
+                updateProduct.ImagePath = RandomImageNames;
+            }
+
+            var product = _mapper.Map<Product>(updateProduct);
+            _context.Products.Update(product);
+            _context.SaveChanges();
+            TempData["status"] = "The Product is updated successfully!";
+            return RedirectToAction("Index");
         }
+
 
 
         //not found filter içinde bir parametre (context) olduğu için ServiceFilter kullanırız

@@ -12,6 +12,7 @@ public class ViewModelMapping:Profile
     {   
         CreateMap<Product,ProductViewModel>().ReverseMap();
         CreateMap<Visitors,VisitorsViewModel>().ReverseMap();
+        CreateMap<Product, ProductUpdateViewModel>().ReverseMap();
     }
 
 }

@@ -1,4 +1,6 @@
-﻿namespace WebApplication2.Models
+﻿using WebApplication3.Web.Models;
+
+namespace WebApplication2.Models
 {
     public class Product
     {
@@ -19,5 +21,10 @@
         public string? Description{ get; set; }
 
         public string? ImagePath { get; set; }
+
+        public int CategoryId { get; set; }
+
+        public Category Category {get; set;}
+
     }
 }

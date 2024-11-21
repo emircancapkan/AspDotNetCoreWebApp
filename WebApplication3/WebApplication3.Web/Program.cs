@@ -100,6 +100,7 @@ app.Run(async(context)=>{
 #endregion
 
 #region Map kullanımı ve use ve run
+/*
 app.Map("/example", app=>{
 
 
@@ -125,11 +126,11 @@ app.Map("/example", app=>{
     });
 
 });
-
+*/
 #endregion
 
 #region MapWhen kullanımı
-
+/*
 //eğer urlde query olarak name varsa bu middleware çalışır. Örneğin:
 //https://localhost:7143/?name=ahmet
 app.MapWhen(context=>context.Request.Query.ContainsKey("name"),app=>{
@@ -144,7 +145,7 @@ app.MapWhen(context=>context.Request.Query.ContainsKey("name"),app=>{
         await context.Response.WriteAsync("Terminal 3. middleware\n");
     });
 });
-
+*/
 #endregion
 
 app.Run();

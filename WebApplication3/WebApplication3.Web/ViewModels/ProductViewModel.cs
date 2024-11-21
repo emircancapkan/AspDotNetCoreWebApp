@@ -31,7 +31,8 @@ public class ProductViewModel
         [Required(ErrorMessage = "This section cannot be blank")]
         public string? Email { get; set; }
         
-        public IFormFile Image { get; set; }
-        
+        public IFormFile? Image { get; set; }
+
+        public string? ImagePath { get; set; }
 
 }

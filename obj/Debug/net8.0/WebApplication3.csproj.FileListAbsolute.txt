@@ -6,12 +6,3 @@ C:\Users\badbo\OneDrive\Belgeler\codes\WebApplication3\obj\Debug\net8.0\WebAppli
 C:\Users\badbo\OneDrive\Belgeler\codes\WebApplication3\obj\Debug\net8.0\WebApplication3.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\badbo\OneDrive\Belgeler\codes\WebApplication3\obj\Debug\net8.0\WebApplication3.RazorAssemblyInfo.cache
 C:\Users\badbo\OneDrive\Belgeler\codes\WebApplication3\obj\Debug\net8.0\WebApplication3.RazorAssemblyInfo.cs
-C:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\obj\Debug\net8.0\WebApplication3.csproj.AssemblyReference.cache
-C:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\obj\Debug\net8.0\WebApplication3.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\obj\Debug\net8.0\WebApplication3.AssemblyInfoInputs.cache
-C:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\obj\Debug\net8.0\WebApplication3.AssemblyInfo.cs
-C:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\obj\Debug\net8.0\WebApplication3.csproj.CoreCompileInputs.cache
-C:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\obj\Debug\net8.0\WebApplication3.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\obj\Debug\net8.0\WebApplication3.RazorAssemblyInfo.cache
-C:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\obj\Debug\net8.0\WebApplication3.RazorAssemblyInfo.cs
-C:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\obj\Debug\net8.0\WebApplication3.sourcelink.json

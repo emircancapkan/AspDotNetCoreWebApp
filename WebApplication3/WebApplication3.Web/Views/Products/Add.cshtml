@@ -6,7 +6,8 @@
 
 <h1>Add product</h1>
 
-<form asp-controller="Products" asp-action="Add" method="post">
+@*enctype image için gerekli olan bir attribute*@
+<form asp-controller="Products" asp-action="Add" method="post" enctype="multipart/form-data">
     <label asp-for="Name">Product Name: </label>
     <input type="text", asp-for="Name">
     <span class="text-danger" asp-validation-for="Name"></span>

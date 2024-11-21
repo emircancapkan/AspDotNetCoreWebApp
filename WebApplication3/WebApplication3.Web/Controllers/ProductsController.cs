@@ -82,14 +82,50 @@ namespace WebApplication3.Web.Controllers
             //2. yöntem
             //Product newProduct = new(){Name=Name,Price=Price,Stock=Stock,Color=Color};
 
-            if(ModelState.IsValid){
-                _context.Products.Add(_mapper.Map<Product>(newProduct));
-                _context.SaveChanges();
+            IActionResult result=null;
 
-                return RedirectToAction("Index");
+            if(ModelState.IsValid){
+                try
+                {
+                    var root = _fileprovider.GetDirectoryContents("wwwroot");
+                    var images = root.First(x => x.Name == "images");
+                    var path = Path.Combine(images.PhysicalPath, newProduct.Image.FileName);
+
+                    using var stream = new FileStream(path, FileMode.Create);
+                    newProduct.Image.CopyTo(stream);
+
+                    var product = _mapper.Map<Product>(newProduct);
+                    product.ImagePath = newProduct.Image.FileName;
+
+                    _context.Products.Add(product);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch(Exception)
+                {
+                    
+                    ModelState.AddModelError("Image", "Image is required.");
+                    ViewBag.ExpireDate = new Dictionary<string,int>(){
+                    {"1 Month",1},
+                    {"3 Month",3},
+                    {"6 Month",6},
+                    {"9 Month",9},
+                    {"12 Month",12},
+                };
+
+                    ViewBag.ColorSelect = new SelectList(new List<ColorSelectList>(){
+                    new (){ Key= "Black" , Value="Black"},
+                    new (){ Key = "Blue", Value="Blue"},
+                    new (){ Key = "Red", Value="Red"},
+                    new (){ Key = "White", Value="White"}
+                },"Value","Key");
+
+                    return View(newProduct);
+                }
+
+
             }
             else{
-            
                 ViewBag.ExpireDate = new Dictionary<string,int>(){
                     {"1 Month",1},
                     {"3 Month",3},
@@ -106,9 +142,7 @@ namespace WebApplication3.Web.Controllers
                 },"Value","Key");
 
                 return View();
-
             }
-
         }
 
         [HttpGet]

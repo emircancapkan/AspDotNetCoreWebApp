@@ -524,3 +524,4 @@ c:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\WebApplication3\Web
 c:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\WebApplication3\WebApplication3.Web\obj\Debug\net8.0\ref\WebApplication3.Web.dll
 c:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\WebApplication3\WebApplication3.Web\bin\Debug\net8.0\AutoMapper.dll
 c:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\WebApplication3\WebApplication3.Web\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+c:\Users\badbo\OneDrive\Documents\GitHub\AspDotNetCoreWebApp\WebApplication3\WebApplication3.Web\bin\Debug\net8.0\AWSSDK.Core.dll

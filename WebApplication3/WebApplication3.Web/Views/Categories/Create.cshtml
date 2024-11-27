@@ -1,0 +1,21 @@
+﻿@model Categories
+
+@{
+    ViewData["Title"] = "Create Categories";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <form asp-controller="Categories" asp-action="Create" method="post">
+        <label asp-for="Name"></label>
+        <input type="text" asp-controller="Categories" asp-for="Name" ><br>
+        <button type="submit">Create Category</button>
+    </form>
+</div>
+
+
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

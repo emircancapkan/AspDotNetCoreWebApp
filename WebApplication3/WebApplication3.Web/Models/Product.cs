@@ -22,9 +22,9 @@ namespace WebApplication2.Models
 
         public string? ImagePath { get; set; }
 
-        public int CategoryId { get; set; }
+        public int CategoriesId { get; set; }
 
-        public Category Category {get; set;}
+        public Categories Categories {get; set;}
 
     }
 }

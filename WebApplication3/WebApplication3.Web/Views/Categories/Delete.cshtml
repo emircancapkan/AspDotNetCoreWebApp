@@ -10,7 +10,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-group">
-        <label for="categoryId">Select Category to Delete:</label>
+        <label for="CategoryId">Select Category to Delete:</label>
         <select asp-for="Id" class="form-control" asp-items="@ViewBag.Categories">
             <option value="">-- Select Category --</option>
         </select>

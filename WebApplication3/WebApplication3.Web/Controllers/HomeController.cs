@@ -70,7 +70,7 @@ namespace WebApplication3.Web.Controllers
             return View();
         }
 
-        public IActionResult Visitor(){
+/*        public IActionResult Visitor(){
             return View();
         }
 
@@ -92,7 +92,7 @@ namespace WebApplication3.Web.Controllers
                 return RedirectToAction(nameof(HomeController.Visitor));
             }
 
-        }
+        }*/
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error(ErrorViewModel errorViewModel)

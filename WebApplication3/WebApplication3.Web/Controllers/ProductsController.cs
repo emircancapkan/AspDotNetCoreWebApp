@@ -9,6 +9,7 @@ using AutoMapper;
 using WebApplication3.Web.ViewModels;
 using WebApplication3.Web.Filters;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication3.Web.Controllers
 {
@@ -33,9 +34,23 @@ namespace WebApplication3.Web.Controllers
 
         public IActionResult Index()
         {
-            var products = _context.Products.ToList();
 
-            return View(_mapper.Map<List<ProductViewModel>>(products));
+            //CATEGORİES'deki elemanları da productviewmodel'e katmak için:
+            List<ProductViewModel> products = _context.Products.Include(x => x.Categories).Select(x => new ProductViewModel()
+            {
+                Id = x.Id,
+                Name = x.Name,
+                CategoryName = x.Categories != null ? x.Categories.Name : "No Category", // CategoryName burada geliyor
+                Price = x.Price,
+                Stock = x.Stock,
+                Description = x.Description,
+                Expire = x.Expire,
+                isPublished = x.isPublished,
+                ImagePath = x.ImagePath,
+            }).ToList();
+
+
+            return View(products);
             
         }
         
@@ -66,6 +81,9 @@ namespace WebApplication3.Web.Controllers
                 new (){ Key = "Red", Value="Red"},
                 new (){ Key = "White", Value="White"}
             },"Value","Key");
+
+            var category=_context.Categories.ToList();
+            ViewBag.SelectCategory= new SelectList(category,"Id","Name");
 
             return View();
         }
@@ -111,22 +129,25 @@ namespace WebApplication3.Web.Controllers
                 }
                 catch(Exception)
                 {
+
+                    var category=_context.Categories.ToList();
+                    ViewBag.SelectCategory= new SelectList(category,"Id","Name");
                     
                     ModelState.AddModelError("Image", "Image is required.");
                     ViewBag.ExpireDate = new Dictionary<string,int>(){
-                    {"1 Month",1},
-                    {"3 Month",3},
-                    {"6 Month",6},
-                    {"9 Month",9},
-                    {"12 Month",12},
-                };
+                        {"1 Month",1},
+                        {"3 Month",3},
+                        {"6 Month",6},
+                        {"9 Month",9},
+                        {"12 Month",12},
+                    };
 
                     ViewBag.ColorSelect = new SelectList(new List<ColorSelectList>(){
-                    new (){ Key= "Black" , Value="Black"},
-                    new (){ Key = "Blue", Value="Blue"},
-                    new (){ Key = "Red", Value="Red"},
-                    new (){ Key = "White", Value="White"}
-                },"Value","Key");
+                        new (){ Key= "Black" , Value="Black"},
+                        new (){ Key = "Blue", Value="Blue"},
+                        new (){ Key = "Red", Value="Red"},
+                        new (){ Key = "White", Value="White"}
+                    },"Value","Key");
 
                     return View(newProduct);
                 }
@@ -160,6 +181,10 @@ namespace WebApplication3.Web.Controllers
             
             var product=_context.Products.Find(id);
 
+            var category=_context.Categories.ToList();
+            //product.CategoriesId'yi yazarak dropdown'da en son seçilen elemanı gösteriyoruz. 
+            ViewBag.SelectCategory= new SelectList(category,"Id","Name",product.CategoriesId);
+
             ViewBag.ExpireValue=product.Expire;
             ViewBag.ExpireDate = new Dictionary<string,int>(){
                 {"1 Month",1},
@@ -184,6 +209,8 @@ namespace WebApplication3.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
+
+
                 ViewBag.ExpireValue = updateProduct.Expire;
                 ViewBag.ExpireDate = new Dictionary<string, int>(){
                     {"1 Month",1},
@@ -199,6 +226,9 @@ namespace WebApplication3.Web.Controllers
                     new (){ Key = "Red", Value="Red"},
                     new (){ Key = "White", Value="White"}
                 }, "Value", "Key", updateProduct.Color);
+
+                var category=_context.Categories.ToList();
+                ViewBag.SelectCategory= new SelectList(category,"Id","Name", updateProduct.CategoriesId);
 
                 return View();
             }

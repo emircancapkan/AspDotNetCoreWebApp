@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"]="Comments";
+}
+
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnSave").click(function () { // id ile seçimi düzelttim
+                var name = $("#Name").val();
+                var comment = $("#Comment").val();
+
+                var jsonData = {
+                    "Name": name,
+                    "Comment": comment
+                };
+
+
+                $.ajax({
+                    type: "POST",
+                    url: "/VisitorAjax/SaveChangesVisitor",
+                    data: JSON.stringify(jsonData), // JSON olarak gönder
+                    contentType: "application/json; charset=utf-8", // JSON formatını belirt
+                    success: function (data) {
+                        console.log(data);
+                    },
+                    error: function (error) {
+                        console.error(error);
+                    }
+                });
+
+
+            }); // Click eventinin kapanışı
+        }); // Document ready'nin kapanışı
+    </script>
+}
+
+<h1>@ViewData["Title"]</h1>
+
+  <div class="mb-3">
+    <label class="form-label" for="Name">Name</label>
+    <input class="form-control" id="Name" name="Name">
+  </div>
+
+<div class="mb-3" style="margin-bottom: 10px;">
+    <textarea name="Comment" id="Comment" class="form-control" placeholder="Comment" style="height: 100px"></textarea>
+    <label for="Comment">Comments</label>
+</div>
+
+  <button id="btnSave" type="button" class="btn btn-primary">Submit</button>
+

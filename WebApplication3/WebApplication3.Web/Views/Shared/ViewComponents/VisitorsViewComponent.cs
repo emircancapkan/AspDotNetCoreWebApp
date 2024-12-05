@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication3.Web.Models;
@@ -23,4 +23,4 @@ public class VisitorsViewComponent:ViewComponent
         return View();
     }
 
-}
+}*/

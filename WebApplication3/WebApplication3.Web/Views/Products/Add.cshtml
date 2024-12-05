@@ -59,6 +59,13 @@
     <span class="text-danger" asp-validation-for="Email"></span>
     <br>
 
+    <div>
+        <label class="form-label">Select a category</label>
+        <select asp-for="CategoriesId" asp-items="@ViewBag.SelectCategory">
+            <option value=""><--Please Select--></option>
+        </select>
+    </div>
+
     <button type="submit">Add Product</button>
 </form>
 

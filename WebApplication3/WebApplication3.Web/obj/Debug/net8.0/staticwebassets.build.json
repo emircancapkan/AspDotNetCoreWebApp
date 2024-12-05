@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fi1DT14xGF3WULI/zsQ6e5WR/Bu1Kaxv0XW+RMoZ/Jo=",
+  "Hash": "VtbzoHhJwEc3yYDSRSx+8Aryg/anq4FaqU9OdUa9S+k=",
   "Source": "WebApplication3.Web",
   "BasePath": "_content/WebApplication3.Web",
   "Mode": "Default",
@@ -150,6 +150,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\images\\7b172913-f57e-49ac-817c-266d3280b850.jpg",
+      "SourceId": "WebApplication3.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\",
+      "BasePath": "_content/WebApplication3.Web",
+      "RelativePath": "images/7b172913-f57e-49ac-817c-266d3280b850.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\7b172913-f57e-49ac-817c-266d3280b850.jpg"
+    },
+    {
       "Identity": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\images\\891da918-53d7-4476-b92c-03e520c4817f.jpg",
       "SourceId": "WebApplication3.Web",
       "SourceType": "Discovered",
@@ -186,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\89a4e20f-be23-4990-9bd1-0b1f8df0cab2.jpg"
+    },
+    {
+      "Identity": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\images\\a2d042d3-b564-4d6e-bfc4-16b21c727088.jpg",
+      "SourceId": "WebApplication3.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\",
+      "BasePath": "_content/WebApplication3.Web",
+      "RelativePath": "images/a2d042d3-b564-4d6e-bfc4-16b21c727088.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a2d042d3-b564-4d6e-bfc4-16b21c727088.jpg"
     },
     {
       "Identity": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\AspDotNetCoreWebApp\\WebApplication3\\WebApplication3.Web\\wwwroot\\images\\car1.jpg",

@@ -8,7 +8,7 @@ public class Visitors
 
     public string Name { get; set; }
 
-    public string Comment { get; set; }
+    public string? Comment { get; set; }
 
     public DateTime Published { get; set; }
 }

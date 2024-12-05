@@ -38,4 +38,8 @@ public class ProductViewModel
         [ValidateNever]
         public string? ImagePath { get; set; }
 
+        public int CategoriesId { get; set; }
+
+        public string? CategoryName { get; set; }
+
 }
